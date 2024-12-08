@@ -1,0 +1,42 @@
+#app {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 1.25rem;
+
+    max-width: 1440px;
+    height: 100svh;
+    
+    margin-inline: auto;
+    padding: 1.25rem;
+}
+
+aside {
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(33, 37, 38, 0.8) 0%, rgba(33, 37, 38, 0.65) 20%, rgba(33, 37, 38, 0.3) 40.5%, rgba(33, 37, 38, 0.1) 100%), url(../images/Background.jpg) no-repeat center top/cover;
+    position: relative;
+    max-height: calc(779px - 2.5rem);
+
+    img {
+        width: 2.86rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font: var(--logo);
+        color: var(--pink);
+        margin-bottom: 0.7rem;
+    }
+
+    p {
+        font: var(--body-md-light);
+        color: var(--text-heading);
+    }
+}
+
+main {
+    padding: 5rem 8.125rem;
+    background-color: var(--shape-body);
+    border-radius: 0.75rem;
+    overflow: scroll;
+}

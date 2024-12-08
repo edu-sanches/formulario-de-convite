@@ -49,6 +49,8 @@
         
         --heading-md: 700 1.75rem/1 var(--font-baloo2); 
         --heading-sm: 700 1.125rem/1 var(--font-baloo2); 
+        
+        --body-md-light: 300 1rem/1 var(--font-open-sans);
 
         --body-md-regular: 400 1rem/1 var(--font-open-sans);
         --body-sm-regular: 400 0.875rem/1 var(--font-open-sans);
@@ -57,4 +59,9 @@
         --body-md-regular: 600 1rem/1 var(--font-open-sans);
         --body-sm-regular: 600 0.875rem/1 var(--font-open-sans);
         --body-xs-regular: 600 0.75rem/1 var(--font-open-sans);
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--shape-background);
 }
