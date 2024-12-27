@@ -1,0 +1,131 @@
+.radio-inner {
+    position: relative;
+
+    input,
+        input:hover,
+        input:focus {
+            all: unset;
+            position: absolute;
+            inset: 0;
+        }
+
+    cursor: pointer;
+}
+
+.about {
+
+    .radio-wrapper {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        gap: 0.25rem;
+    
+        padding: 0.25rem;
+
+        background-color: var(--input-base);
+        border: 1px solid var(--input-stroke);
+        border-radius: 0.5rem;
+        font: var(--body-md-regular);
+
+        &:focus-within {
+            outline: 1px solid var(--brand-light);
+        }
+    }
+    
+    .radio-inner {
+        height: 100%;
+        
+        & label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            height: 100%;
+    
+            span {
+                font: var(--body-sm-regular);
+            }
+        }
+
+        &:hover,
+        &:has(:checked) {
+            label {
+                path {
+                    fill: var(--brand-light);
+                }
+            }
+
+            border-radius: 0.25rem;
+            background-color: var(--shape-button);
+            
+            span {
+                font: var(--body-sm-semibold);
+                color: var(--text-heading);
+            }
+        }
+    }
+}
+
+.personalization {
+    #main-color {
+        input {
+            width: 1.75rem;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            border: 4px solid var(--shape-button);
+            cursor: pointer;
+
+            &:hover {
+                border-color: var(--shape-hover);
+            }
+
+            &:focus,
+            &:active {
+                border-color: var(--shape-hover);
+                outline: 2px solid var(--brand-light);
+                outline-offset: -1px;
+            }
+        }
+    }
+
+    
+    .input-wrapper:nth-child(3) {
+        .radio-wrapper {
+            display: grid;
+            gap: 0.5rem;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr));
+
+            .radio-inner {
+                border: 1px solid var(--input-stroke);
+                border-radius: 0.5rem;
+                background-color: var(--shape-button);
+
+                padding: 0.25rem;
+
+                img {
+                    width: -webkit-fill-available;
+                }
+
+                label {
+                    display: block;
+                    margin: 0.5rem;
+                    text-align: center;
+                    font: var(--body-sm-regular);
+                    color: var(--text-heading);
+                }
+
+                &:hover {
+                    background-color: var(--shape-hover);
+                }
+
+                &:focus,
+                &:has(:checked) {
+                    outline: 2px solid var(--brand-light);
+                    outline-offset: -2px;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,46 @@
+.droparea-wrapper {
+    
+    .select-file-button-wrapper {
+        position: relative;
+        width: fit-content;
+        gap: 0.75rem;
+
+        align-items: center;
+
+        .select-file-button {
+            align-items: center;
+            gap: 0.5rem;
+            font: var(--body-sm-semibold);
+            color: var(--text-heading);
+            background-color: var(--shape-button);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+        }
+
+        p {
+            color: var(--input-placeholder);
+            font: var(--body-md-regular);
+        }
+    }
+    
+    input[type="file"] {
+        all: unset;
+        
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        
+    }
+    
+    &:hover {
+        .select-file-button {
+            background-color: var(--shape-hover);
+        }
+    }
+
+    &:focus-within {
+        .select-file-button {
+            outline: 1px solid var(--brand-light);
+        }
+    }
+}

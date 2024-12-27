@@ -1,0 +1,29 @@
+button {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 0.75rem;
+
+    width: fit-content;
+    height: 48px;
+    padding: 0.75rem 1.25rem;
+
+    font: var(--body-md-semibold);
+
+    color: var(--text-heading);
+    background-color: var(--brand-dark);
+    
+    border-radius: 0.5rem;
+    border: none;
+
+    cursor: pointer;
+
+    img {
+        width: 20px;
+    }
+
+    &:hover {
+        background-color: var(--brand-mid);
+    }
+    
+}

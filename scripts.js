@@ -52,3 +52,16 @@ function changeInputDateColor(dateType) {
         dateValue.style.color = 'var(--input-placeholder)'
     }
 }
+
+// SHOW FILE NAME
+
+const fileNameTag = document.getElementById('file-name')
+const inputFile = document.getElementById('cover-photo')
+
+inputFile.addEventListener('change', (event) => {
+    let fileInfos = event.target.files
+    if (fileInfos.length > 0) {
+        fileNameTag.style.color = "var(--text-body)"
+        fileNameTag.innerText = fileInfos[0].name
+    }
+})

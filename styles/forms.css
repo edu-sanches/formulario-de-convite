@@ -1,0 +1,27 @@
+@import url(fields/index.css);
+
+form {
+    display: grid;
+    gap: 3rem;
+}
+
+fieldset {
+    display: grid;
+    gap: 1.75rem;
+
+    border: none;
+
+    &.terms-conditions {
+        gap: 1rem;
+    }
+}
+
+legend {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+    font: var(--heading-sm);
+    color: var(--text-heading);
+    margin-bottom: 1.5rem;
+}

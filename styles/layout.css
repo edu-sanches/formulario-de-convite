@@ -3,7 +3,7 @@
     grid-template-columns: 400px 1fr;
     gap: 1.25rem;
 
-    max-width: 1440px;
+    max-width: 1280px;
     height: 100svh;
     
     margin-inline: auto;
@@ -15,7 +15,6 @@ aside {
     padding: 2rem;
     background: linear-gradient(180deg, rgba(33, 37, 38, 0.8) 0%, rgba(33, 37, 38, 0.65) 20%, rgba(33, 37, 38, 0.3) 40.5%, rgba(33, 37, 38, 0.1) 100%), url(../images/Background.jpg) no-repeat center top/cover;
     position: relative;
-    max-height: calc(779px - 2.5rem);
 
     img {
         width: 2.86rem;
@@ -35,8 +34,38 @@ aside {
 }
 
 main {
-    padding: 5rem 8.125rem;
+    padding: 5rem 7rem;
     background-color: var(--shape-body);
     border-radius: 0.75rem;
     overflow: scroll;
+
+    & h1 {
+        font: var(--heading-md);
+        color: var(--text-heading);
+        margin-bottom: 2.5rem;
+    }
+}
+
+hr {
+    border: 1px solid var(--input-stroke);
+    outline: 0;
+}
+
+a {
+    color: var(--brand-light);
+    font: var(--body-sm-semibold);
+}
+
+.error {
+    position: absolute;
+    bottom: -22px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+        color: var(--danger);
+        font: var(--body-xs-regular);
+    }
 }
