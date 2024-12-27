@@ -22,12 +22,12 @@ for (color of arrayMainColors) {
     newInput.value = `var(${color})`
     newInput.style.backgroundColor = `var(${color})`
     newInput.id = color.replace('--', '')
-    
+
     if (arrayMainColors.indexOf(color) === 0) {
         newInput.checked = true
     }
-    
-    mainColor.append(newInput)  
+
+    mainColor.append(newInput)
 }
 
 
@@ -39,3 +39,16 @@ let darkThemeLabel = document.getElementById('theme-label')
 darkThemeInput.addEventListener('change', () => {
     darkThemeLabel.innerText = darkThemeInput.checked ? 'Claro' : 'Escuro'
 })
+
+
+// CHANGE DATE COLORS IF SELECTED OR NOT
+
+function changeInputDateColor(dateType) {
+    const dateValue = document.getElementById(dateType)
+
+    if (dateValue.value) {
+        dateValue.style.color = 'var(--text-body)'
+    } else {
+        dateValue.style.color = 'var(--input-placeholder)'
+    }
+}
